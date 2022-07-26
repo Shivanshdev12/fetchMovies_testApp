@@ -7,7 +7,7 @@ const MovieList = (props) => {
   async function deleteHandler(id) {
     try {
       const response = await fetch(
-        `https://react-http-2210-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json`,
+        `https://react-http-2210-default-rtdb.asia-southeast1.firebasedatabase.app/movies/${id}.json`,
         {
           method: "DELETE",
         }
