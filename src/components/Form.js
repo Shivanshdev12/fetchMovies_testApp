@@ -2,18 +2,9 @@ import React from "react";
 import "../App.css";
 import "./Form.css";
 
-const Form = () => {
-  const formHandler = (e) => {
-    e.preventDefault();
-    const NewMovieobj = {
-      title: e.target[0].value,
-      desc: e.target[1].value,
-      date: e.target[2].value,
-    };
-    console.log(NewMovieobj);
-  };
+const Form = (props) => {
   return (
-    <form className="form" onSubmit={formHandler}>
+    <form className="form" onSubmit={props.onClick}>
       <h3>Title</h3>
       <input type="text" name="title" />
       <h3>Opening Text</h3>
